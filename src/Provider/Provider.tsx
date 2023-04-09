@@ -261,7 +261,9 @@ const initialContext: AppContext = makeAppContext();
 const appContext = createContext<AppContext>(initialContext);
 
 import './body.css'
+import './layout.css'
 import './theme.css'
+import '../FontAwesome/index.css'
 
 export const NightProvider: ParentComponent = (props) => (
   <appContext.Provider value={initialContext}>

@@ -1,20 +1,51 @@
-import { ParentComponent } from "solid-js"
+import { ParentComponent, mergeProps } from "solid-js"
 import clsx from 'clsx'
 import './Button.css'
+import { Icon, Icons } from "../components/Icon/Icon"
 
 type ButtonProps = {
-  variants?: Array<(
-    | 'button' | 'button-line' | 'button-ring' | 'button-text'
-    | 'button-small' | 'button-large' | 'button-extra-large' | 'button-block'
-    | 'button-link'
-  )>
-  textContent?: string
-  // TODO handle the case of .button .icon
+  text?: string
+  srOnly?: boolean
+  iconName?: Icons
+  iconPosition?: 'left' | 'right'
+  size?: 'small' | 'large'
+  block?: boolean
+  title?: string
+  class?: string
+  onClick?: (event: MouseEvent) => void
+  variants?: Array<'button-ring' | 'button-line' | 'button-link'>
+  active?: boolean
 }
 const Button: ParentComponent<ButtonProps> = (props) => {
+  const merged = mergeProps({ iconPosition: 'left', text: 'Button' }, props)
   return (
-    <button class={clsx(props.variants)}>
-      {props.children}
+    <button
+      title={props.title}
+      class={clsx('button', 
+        props.block && 'button-block',
+        props.size === 'small' && 'button-small',
+        props.size === 'large' && 'button-large',
+        props.class,
+        props.variants,
+        props.active && 'active'
+      )}
+      tabIndex={1}
+      type="button"
+      onclick={props.onClick}
+      // children={props.children}
+    >
+      {props.iconName && merged.iconPosition === 'left' && (
+        <Icon name={props.iconName}/>
+      )}
+      {props.text && (
+        <span
+          class={clsx("button-text", props.srOnly && 'sr-only')}
+          textContent={merged.text}
+        />
+      )}
+      {props.iconName && merged.iconPosition === 'right' && (
+        <Icon name={props.iconName} />
+      )}
     </button>
   )
 }
