@@ -1,9 +1,21 @@
-import { Component } from "solid-js"
+import { ParentComponent } from "solid-js"
+import clsx from 'clsx'
 import './Button.css'
 
-const Button: Component<{  }> = (props) => {
+type ButtonProps = {
+  variants?: Array<(
+    | 'button' | 'button-line' | 'button-ring' | 'button-text'
+    | 'button-small' | 'button-large' | 'button-extra-large' | 'button-block'
+    | 'button-link'
+  )>
+  textContent?: string
+  // TODO handle the case of .button .icon
+}
+const Button: ParentComponent<ButtonProps> = (props) => {
   return (
-    <button class="button">dadadada</button>
+    <button class={clsx(props.variants)}>
+      {props.children}
+    </button>
   )
 }
 

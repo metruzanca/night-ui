@@ -5,7 +5,10 @@ const App: Component = () => {
   return (
     <div>
       <NightProvider>
-        <Button/>
+        <Button
+          variants={['button', 'button-block', 'button-ring']}
+          children='Hello World!'
+        />
       </NightProvider>
     </div>
   )
