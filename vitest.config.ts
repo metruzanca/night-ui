@@ -16,24 +16,24 @@ export default defineConfig(({ mode }) => {
       }),
     ],
     test: {
-      watch: false,
-      isolate: !testSSR,
-      env: {
-        NODE_ENV: testSSR ? 'production' : 'development',
-        DEV: testSSR ? '' : '1',
-        SSR: testSSR ? '1' : '',
-        PROD: testSSR ? '1' : '',
-      },
-      environment: testSSR ? 'node' : 'jsdom',
-      transformMode: { web: [/\.[jt]sx$/] },
-      ...(testSSR
-        ? {
-            include: ['test/server.test.{ts,tsx}'],
-          }
-        : {
-            include: ['test/*.test.{ts,tsx}'],
-            exclude: ['test/server.test.{ts,tsx}'],
-          }),
+      // watch: true,
+      // isolate: !testSSR,
+      // env: {
+      //   NODE_ENV: testSSR ? 'production' : 'development',
+      //   DEV: testSSR ? '' : '1',
+      //   SSR: testSSR ? '1' : '',
+      //   PROD: testSSR ? '1' : '',
+      // },
+      // environment: testSSR ? 'node' : 'jsdom',
+      // transformMode: { web: [/\.[jt]sx$/] },
+      // ...(testSSR
+      //   ? {
+      //       include: ['test/server.test.{ts,tsx}'],
+      //     }
+      //   : {
+      //       include: ['test/*.test.{ts,tsx}'],
+      //       exclude: ['test/server.test.{ts,tsx}'],
+      //     }),
     },
     resolve: {
       conditions: testSSR ? ['node'] : ['browser', 'development'],
