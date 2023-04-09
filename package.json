@@ -1,17 +1,17 @@
 {
   "version": "0.0.0",
-  "name": "{{name_of_lib}}",
-  "description": "{{desc_of_lib}}",
+  "name": "night-ui",
+  "description": "NightTab inspired Solidjs UI Kit",
   "license": "MIT",
-  "author": "{{me}}",
+  "author": "metruzanca",
   "contributors": [],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/{{me}}/{{name_of_lib}}.git"
+    "url": "git+https://github.com/metruzanca/night-ui.git"
   },
-  "homepage": "https://github.com/{{me}}/{{name_of_lib}}#readme",
+  "homepage": "https://github.com/metruzanca/night-ui#readme",
   "bugs": {
-    "url": "https://github.com/{{me}}/{{name_of_lib}}/issues"
+    "url": "https://github.com/metruzanca/night-ui/issues"
   },
   "files": [
     "dist"
