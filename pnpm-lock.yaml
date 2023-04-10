@@ -2,12 +2,14 @@ lockfileVersion: 5.4
 
 specifiers:
   '@types/lodash.get': ^4.4.7
+  '@types/lodash.set': ^4.3.7
   clsx: ^1.2.1
   concurrently: ^8.0.1
   esbuild: ^0.17.15
   esbuild-plugin-solid: ^0.5.0
   jsdom: ^21.1.1
   lodash.get: ^4.4.2
+  lodash.set: ^4.3.2
   prettier: 2.8.7
   solid-js: ^1.7.3
   tsup: ^6.7.0
@@ -17,16 +19,16 @@ specifiers:
   vite-plugin-solid: ^2.7.0
   vitest: ^0.30.0
 
-dependencies:
-  clsx: 1.2.1
-  lodash.get: 4.4.2
-
 devDependencies:
   '@types/lodash.get': 4.4.7
+  '@types/lodash.set': 4.3.7
+  clsx: 1.2.1
   concurrently: 8.0.1
   esbuild: 0.17.15
   esbuild-plugin-solid: 0.5.0_vhe6mjieykoyvtwskprcp6pr3y
   jsdom: 21.1.1
+  lodash.get: 4.4.2
+  lodash.set: 4.3.2
   prettier: 2.8.7
   solid-js: 1.7.3
   tsup: 6.7.0_typescript@5.0.4
@@ -921,6 +923,12 @@ packages:
       '@types/lodash': 4.14.192
     dev: true
 
+  /@types/lodash.set/4.3.7:
+    resolution: {integrity: sha512-bS5Wkg/nrT82YUfkNYPSccFrNZRL+irl7Yt4iM6OTSQ0VZJED2oUIVm15NkNtUAQ8SRhCe+axqERUV6MJgkeEg==}
+    dependencies:
+      '@types/lodash': 4.14.192
+    dev: true
+
   /@types/lodash/4.14.192:
     resolution: {integrity: sha512-km+Vyn3BYm5ytMO13k9KTp27O75rbQ0NFw+U//g+PX7VZyjCioXaRFisqSIJRECljcTv73G3i6BpglNGHgUQ5A==}
     dev: true
@@ -1225,7 +1233,7 @@ packages:
   /clsx/1.2.1:
     resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
     engines: {node: '>=6'}
-    dev: false
+    dev: true
 
   /color-convert/1.9.3:
     resolution: {integrity: sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==}
@@ -1842,7 +1850,11 @@ packages:
 
   /lodash.get/4.4.2:
     resolution: {integrity: sha512-z+Uw/vLuy6gQe8cfaFWD7p0wVv8fJl3mbzXh33RS+0oW2wvUqiRXiQ69gLWSLpgB5/6sU+r6BlQR0MBILadqTQ==}
-    dev: false
+    dev: true
+
+  /lodash.set/4.3.2:
+    resolution: {integrity: sha512-4hNPN5jlm/N/HLMCO43v8BXKq9Z7QdAGc/VGrRD61w8gN9g/6jF9A4L1pbUgBLCffi0w9VsXfTOij5x8iTyFvg==}
+    dev: true
 
   /lodash.sortby/4.7.0:
     resolution: {integrity: sha512-HDWXG8isMntAyRF5vZ7xKuEvOhT4AhlRt/3czTSjvGUxjYCBVRQY48ViDHyfYz9VIoBkW4TMGQNapx+l3RUwdA==}
